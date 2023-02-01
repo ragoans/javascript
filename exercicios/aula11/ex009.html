@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <label for="nacionalidade">Insira qual seu país de origem: </label>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="Definir" onclick="definir()">
+    <div id="res"></div>
+<script>
+    function definir() {
+        var inpais = window.document.getElementById('nacionalidade')
+        var pais = String(inpais.value)
+        var res = window.document.querySelector('div#res')
+        res.innerHTML = `<p>Você é do(a) ${pais}!</p>`
+        if (pais == 'Brasil') {
+            res.innerHTML += `<p>Você é brasileiro!</p>`
+        } else {
+            res.innerHTML += `<p>Você é estrangeiro!</p>`
+        }
+    }
+</script>
+</body>
+</html>
