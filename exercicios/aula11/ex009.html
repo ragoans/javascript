@@ -15,7 +15,7 @@
 <script>
     function definir() {
         var inpais = window.document.getElementById('nacionalidade')
-        var pais = String(inpais.value)
+        var pais = inpais.value
         var res = window.document.querySelector('div#res')
         res.innerHTML = `<p>Você é do(a) ${pais}!</p>`
         if (pais == 'Brasil') {
